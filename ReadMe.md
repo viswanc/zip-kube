@@ -1,7 +1,7 @@
 Zip Kube
 ========
 
-  A spike on implementing Zipkin on a Kubernetes cluster.
+  A spike for implementing Zipkin tracing on a Kubernetes cluster.
 
 Notes
 -----
@@ -14,3 +14,5 @@ Log
 * 180324
 
   * 0240  Started the project with converted docker-compose config.
+  * 1115  Successfully ran a service.
+  * 1115  Successfully ran all the services.

@@ -19,18 +19,26 @@ spec:
         io.kompose.service: front-envoy
     spec:
       containers:
-      - image: front-envoy
+      - image: gcr.io/api-project-483163119575/zipkintracing_front-envoy
         name: front-envoy
         ports:
         - containerPort: 80
         - containerPort: 8001
         resources: {}
         volumeMounts:
-        - mountPath: /etc/front-envoy.yaml
-          name: front-envoy-claim0
+        - name: front-envoy-claim0
+          mountPath: /var/logs/zipkin/front-envoy-claim0
+        - name: envoy-config-front-envoy
+          mountPath: /etc
       restartPolicy: Always
       volumes:
       - name: front-envoy-claim0
         persistentVolumeClaim:
           claimName: front-envoy-claim0
+      - name: envoy-config-front-envoy
+        configMap:
+          name: envoy-config-front-envoy
+          items:
+            - key: config
+              path: front-envoy.yaml
 status: {}
