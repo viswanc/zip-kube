@@ -16,3 +16,5 @@ Log
   * 0240  Started the project with converted docker-compose config.
   * 1115  Successfully ran a service.
   * 1115  Successfully ran all the services.
+  * 1320  Restructured the dirs.
+  * 1340  Included the image files from the original source. *#Note:* There are some minor fixes to the python file.
