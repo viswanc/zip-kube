@@ -9,11 +9,10 @@ metadata:
     io.kompose.service: service1
   name: service1
 spec:
-  clusterIP: None
   ports:
-  - name: headless
-    port: 55555
-    targetPort: 0
+  - name: "admin"
+    port: 8001
+    targetPort: 8001
   selector:
     io.kompose.service: service1
 status:

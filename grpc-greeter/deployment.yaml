@@ -38,5 +38,5 @@ spec:
           name: envoy-config-grpc-greeter
           items:
             - key: config
-              path: service-envoy.yaml
+              path: envoy-config.yaml
 status: {}
